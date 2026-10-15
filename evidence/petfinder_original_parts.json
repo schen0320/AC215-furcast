@@ -1,0 +1,39 @@
+{
+  "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+  "acquired_utc": "2026-10-15T02:24:17.437927+00:00",
+  "archive_sha256": "d6b5adbd0332c1151c03ff9e408ecbaef5a556250805d77729e1dcf70af26764",
+  "archive_bytes": 2083562071,
+  "zip_members": 163871,
+  "uncompressed_bytes": 2480570191,
+  "competition_rules_accepted": true,
+  "access": "authorized signed-in official Kaggle browser download",
+  "sharing": "Competition data restricted to eligible participants who accepted rules; no public redistribution",
+  "scope": "all files provided by competition download at acquisition",
+  "parts": [
+    {
+      "filename": "PetFinder_Original_Part_01.bin",
+      "bytes": 419430400,
+      "sha256": "fe84e5b7b1e8d2125403145d54501a2bf9f0a1653638c36a0bd95734351e31d7"
+    },
+    {
+      "filename": "PetFinder_Original_Part_02.bin",
+      "bytes": 419430400,
+      "sha256": "021440a7fdd275da2d08822a7d0d50c70fe9f20cde32375ee7233ad49800793b"
+    },
+    {
+      "filename": "PetFinder_Original_Part_03.bin",
+      "bytes": 419430400,
+      "sha256": "7b6f1369d93dd714a6b8d2daca77ff32a3f0c16d3ecfbf36c13efee415b4b2a8"
+    },
+    {
+      "filename": "PetFinder_Original_Part_04.bin",
+      "bytes": 419430400,
+      "sha256": "8913776e790fa060fcf7fa270b0936463207d611c875c1e63d6010e6b3172ec6"
+    },
+    {
+      "filename": "PetFinder_Original_Part_05.bin",
+      "bytes": 405840471,
+      "sha256": "af2b803cf5ebce8aa9c58886d29a23fe8a36ea03bb869d29d4448c0337b35552"
+    }
+  ]
+}

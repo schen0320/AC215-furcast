@@ -1,0 +1,1010 @@
+[
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "animal_id",
+    "display_name": "Animal ID",
+    "source_type": "text",
+    "canonical_field": "animal_id",
+    "role": "group_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "name",
+    "display_name": "Name",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "exclude_identifier",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "datetime",
+    "display_name": "DateTime",
+    "source_type": "calendar_date",
+    "canonical_field": "prediction_time",
+    "role": "split_and_label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "datetime2",
+    "display_name": "MonthYear",
+    "source_type": "calendar_date",
+    "canonical_field": "",
+    "role": "redundant_drop",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "found_location",
+    "display_name": "Found Location",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "exclude_address",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "intake_type",
+    "display_name": "Intake Type",
+    "source_type": "text",
+    "canonical_field": "intake_type",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "intake_condition",
+    "display_name": "Intake Condition",
+    "source_type": "text",
+    "canonical_field": "intake_condition",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "animal_type",
+    "display_name": "Animal Type",
+    "source_type": "text",
+    "canonical_field": "species",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "sex_upon_intake",
+    "display_name": "Sex upon Intake",
+    "source_type": "text",
+    "canonical_field": "sex_at_intake",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "age_upon_intake",
+    "display_name": "Age upon Intake",
+    "source_type": "text",
+    "canonical_field": "age_days_approx",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "breed",
+    "display_name": "Breed",
+    "source_type": "text",
+    "canonical_field": "breed_at_intake",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "wter-evkm",
+    "source_field": "color",
+    "display_name": "Color",
+    "source_type": "text",
+    "canonical_field": "color_at_intake",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/wter-evkm.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "animal_id",
+    "display_name": "Animal ID",
+    "source_type": "text",
+    "canonical_field": "animal_id",
+    "role": "join_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "date_of_birth",
+    "display_name": "Date of Birth",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_without_intake_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "name",
+    "display_name": "Name",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "exclude_identifier",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "datetime",
+    "display_name": "DateTime",
+    "source_type": "text",
+    "canonical_field": "outcome_time",
+    "role": "label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "monthyear",
+    "display_name": "MonthYear",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "outcome_type",
+    "display_name": "Outcome Type",
+    "source_type": "text",
+    "canonical_field": "event_cause",
+    "role": "label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "outcome_subtype",
+    "display_name": "Outcome Subtype",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "audit_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "animal_type",
+    "display_name": "Animal Type",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "sex_upon_outcome",
+    "display_name": "Sex upon Outcome",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "age_upon_outcome",
+    "display_name": "Age upon Outcome",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "breed",
+    "display_name": "Breed",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "9t4d-g238",
+    "source_field": "color",
+    "display_name": "Color",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/9t4d-g238.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "id",
+    "display_name": "ID",
+    "source_type": "text",
+    "canonical_field": "intake_event_id",
+    "role": "provenance_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "source_date",
+    "display_name": "Source Date",
+    "source_type": "calendar_date",
+    "canonical_field": "prediction_time",
+    "role": "split_and_label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "animal_id",
+    "display_name": "Animal ID",
+    "source_type": "text",
+    "canonical_field": "animal_id",
+    "role": "group_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "type",
+    "display_name": "Type",
+    "source_type": "text",
+    "canonical_field": "species",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "source_name",
+    "display_name": "Source Name",
+    "source_type": "text",
+    "canonical_field": "intake_type",
+    "role": "candidate_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "name_at_intake",
+    "display_name": "Name",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "exclude_identifier",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "ispreviouslyspayedneutered",
+    "display_name": "IsPreviouslySpayedNeutered",
+    "source_type": "checkbox",
+    "canonical_field": "",
+    "role": "candidate_optional_not_in_baseline",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "sex",
+    "display_name": "Sex",
+    "source_type": "text",
+    "canonical_field": "sex_at_intake",
+    "role": "candidate_feature_snapshot_unverified",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "primary_breed",
+    "display_name": "Primary Breed",
+    "source_type": "text",
+    "canonical_field": "breed_at_intake",
+    "role": "candidate_feature_snapshot_unverified",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "primary_color",
+    "display_name": "Primary Color",
+    "source_type": "text",
+    "canonical_field": "color_at_intake",
+    "role": "candidate_feature_snapshot_unverified",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "secondary_color",
+    "display_name": "Secondary Color",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "candidate_optional_not_in_baseline",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "intake_health_condition",
+    "display_name": "Intake Health Condition",
+    "source_type": "text",
+    "canonical_field": "intake_condition",
+    "role": "candidate_feature_mostly_missing",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "date_of_birth",
+    "display_name": "Date of Birth",
+    "source_type": "calendar_date",
+    "canonical_field": "age_days_approx",
+    "role": "candidate_feature_snapshot_unverified",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "found_address",
+    "display_name": "Found Address",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "exclude_address",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "pyqf-r2dc",
+    "source_field": "timestamp",
+    "display_name": "Timestamp",
+    "source_type": "calendar_date",
+    "canonical_field": "",
+    "role": "extract_metadata_not_event_time",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/pyqf-r2dc.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "id",
+    "display_name": "ID",
+    "source_type": "text",
+    "canonical_field": "outcome_event_id",
+    "role": "provenance_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "outcome_date",
+    "display_name": "Outcome Date",
+    "source_type": "calendar_date",
+    "canonical_field": "outcome_time",
+    "role": "label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "animal_id",
+    "display_name": "Animal ID",
+    "source_type": "text",
+    "canonical_field": "animal_id",
+    "role": "join_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "name",
+    "display_name": "Name",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "outcome_status",
+    "display_name": "Outcome Status",
+    "source_type": "text",
+    "canonical_field": "event_cause",
+    "role": "label_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "euthanasia_reason",
+    "display_name": "Euthanasia Reason",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_feature",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "type",
+    "display_name": "Type",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "sex",
+    "display_name": "Sex",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "spayed_neutered",
+    "display_name": "Spayed/Neutered",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "primary_breed",
+    "display_name": "Primary Breed",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "primary_color",
+    "display_name": "Primary Color",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "secondary_color",
+    "display_name": "Secondary Color",
+    "source_type": "text",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "date_of_birth",
+    "display_name": "Date of Birth",
+    "source_type": "calendar_date",
+    "canonical_field": "",
+    "role": "forbidden_outcome_snapshot",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "intake_date",
+    "display_name": "Intake Date",
+    "source_type": "calendar_date",
+    "canonical_field": "prediction_time_join_key",
+    "role": "label_join_only",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "days_in_shelter",
+    "display_name": "Days in Shelter",
+    "source_type": "number",
+    "canonical_field": "",
+    "role": "label_crosscheck_only_not_exact_elapsed",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "gsvs-ypi7",
+    "source_field": "timestamp",
+    "display_name": "Timestamp",
+    "source_type": "calendar_date",
+    "canonical_field": "",
+    "role": "extract_metadata_not_event_time",
+    "evidence": "actual schema + full snapshot",
+    "source_url": "https://data.austintexas.gov/api/views/gsvs-ypi7.json"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Type",
+    "canonical_field": "Type",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Breed1",
+    "canonical_field": "Breed1",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Breed2",
+    "canonical_field": "Breed2",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Gender",
+    "canonical_field": "Gender",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Color1",
+    "canonical_field": "Color1",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Color2",
+    "canonical_field": "Color2",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Color3",
+    "canonical_field": "Color3",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "MaturitySize",
+    "canonical_field": "MaturitySize",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "FurLength",
+    "canonical_field": "FurLength",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Vaccinated",
+    "canonical_field": "Vaccinated",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Dewormed",
+    "canonical_field": "Dewormed",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Sterilized",
+    "canonical_field": "Sterilized",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Health",
+    "canonical_field": "Health",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "State",
+    "canonical_field": "State",
+    "role": "categorical_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Age",
+    "canonical_field": "Age",
+    "role": "numeric_candidate",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Fee",
+    "canonical_field": "Fee",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "PetID",
+    "canonical_field": "PetID",
+    "role": "record_key_only",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "RescuerID",
+    "canonical_field": "RescuerID",
+    "role": "split_group_only",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Quantity",
+    "canonical_field": "Quantity",
+    "role": "cohort_filter_one",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "PhotoAmt",
+    "canonical_field": "PhotoAmt",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "VideoAmt",
+    "canonical_field": "VideoAmt",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Description",
+    "canonical_field": "Description",
+    "role": "excluded_from_v0.3_features_pending_feature_time_review",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "Name",
+    "canonical_field": "Name",
+    "role": "exclude_identifier",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-adoption-prediction",
+    "source_field": "AdoptionSpeed",
+    "canonical_field": "AdoptionSpeed",
+    "role": "label_only",
+    "evidence": "Actual official train/test CSV, same-archive lookup dictionaries and full image/JSON audit, acquired 2026-10-15",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-adoption-prediction/data",
+    "temporal_provenance": "No independently verified first-listing snapshot"
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Id",
+    "canonical_field": "Id",
+    "role": "record_key_only",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "string",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Pawpularity",
+    "canonical_field": "Pawpularity",
+    "role": "separate_engagement_regression_target_not_AdoptionSpeed_or_LOS",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Subject Focus",
+    "canonical_field": "Subject Focus",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Eyes",
+    "canonical_field": "Eyes",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Face",
+    "canonical_field": "Face",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Near",
+    "canonical_field": "Near",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Action",
+    "canonical_field": "Action",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Accessory",
+    "canonical_field": "Accessory",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Group",
+    "canonical_field": "Group",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Collage",
+    "canonical_field": "Collage",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Human",
+    "canonical_field": "Human",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Occlusion",
+    "canonical_field": "Occlusion",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Info",
+    "canonical_field": "Info",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "petfinder-pawpularity-score",
+    "source_field": "Blur",
+    "canonical_field": "Blur",
+    "role": "human_visual_annotation_not_assumed_available_at_inference",
+    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
+    "source_type": "integer",
+    "local_values_verified": false
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "image_id",
+    "canonical_field": "image_id",
+    "role": "record_key",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "class_id",
+    "canonical_field": "class_id",
+    "role": "auxiliary_label_or_annotation",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "species_id",
+    "canonical_field": "species_id",
+    "role": "auxiliary_label_or_annotation",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "breed_id",
+    "canonical_field": "breed_id",
+    "role": "auxiliary_label_or_annotation",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "trimap",
+    "canonical_field": "trimap",
+    "role": "auxiliary_label_or_annotation",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "oxford_iiit_pet",
+    "source_field": "head_xml",
+    "canonical_field": "head_xml",
+    "role": "auxiliary_label_or_annotation",
+    "evidence": "official annotation archive inspected"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "file_list.mat:file_list",
+    "display_name": "image_id",
+    "source_type": "relative image path",
+    "canonical_field": "image_id",
+    "role": "join_and_split_only",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "file_list.mat:labels",
+    "display_name": "class_id",
+    "source_type": "1-based integer class",
+    "canonical_field": "class_id",
+    "role": "target_breed_only",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "train_list.mat:file_list",
+    "display_name": "official_train",
+    "source_type": "relative image path",
+    "canonical_field": "official_train",
+    "role": "split_only",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "test_list.mat:file_list",
+    "display_name": "official_test",
+    "source_type": "relative image path",
+    "canonical_field": "official_test",
+    "role": "held_out_test_only",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "Images/*/*.jpg",
+    "display_name": "image_rgb",
+    "source_type": "image",
+    "canonical_field": "image_rgb",
+    "role": "input_modality",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  },
+  {
+    "dataset_id": "stanford_dogs",
+    "source_field": "Annotation/*/*:object/bndbox",
+    "display_name": "bbox",
+    "source_type": "bounding box",
+    "canonical_field": "bbox",
+    "role": "optional_annotation_not_used_for_full_image_baseline",
+    "evidence": "actual official archive and MATLAB list inspected",
+    "source_url": "http://vision.stanford.edu/aditya86/ImageNetDogs/main.html"
+  }
+]

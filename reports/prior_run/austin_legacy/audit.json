@@ -1,0 +1,96 @@
+{
+  "raw_intakes": {
+    "rows": 173812,
+    "columns": [
+      "animal_id",
+      "name",
+      "datetime",
+      "datetime2",
+      "found_location",
+      "intake_type",
+      "intake_condition",
+      "animal_type",
+      "sex_upon_intake",
+      "age_upon_intake",
+      "breed",
+      "color"
+    ],
+    "duplicate_rows": 36,
+    "null_counts": {
+      "animal_id": 0,
+      "name": 49991,
+      "datetime": 0,
+      "datetime2": 0,
+      "found_location": 0,
+      "intake_type": 0,
+      "intake_condition": 0,
+      "animal_type": 0,
+      "sex_upon_intake": 0,
+      "age_upon_intake": 0,
+      "breed": 0,
+      "color": 0
+    },
+    "repeated_animal_rows": 17525
+  },
+  "raw_outcomes": {
+    "rows": 173775,
+    "columns": [
+      "animal_id",
+      "date_of_birth",
+      "datetime",
+      "monthyear",
+      "outcome_type",
+      "outcome_subtype",
+      "animal_type",
+      "sex_upon_outcome",
+      "age_upon_outcome",
+      "breed",
+      "color",
+      "name"
+    ],
+    "duplicate_rows": 26,
+    "null_counts": {
+      "animal_id": 0,
+      "date_of_birth": 0,
+      "datetime": 0,
+      "monthyear": 0,
+      "outcome_type": 46,
+      "outcome_subtype": 94115,
+      "animal_type": 0,
+      "sex_upon_outcome": 0,
+      "age_upon_outcome": 0,
+      "breed": 0,
+      "color": 0,
+      "name": 49784
+    },
+    "repeated_animal_rows": 17538
+  },
+  "cutoff": "2025-05-05 00:00:00-05:00",
+  "horizon_days": 30,
+  "bad_timeline_animal_count": 3582,
+  "status_counts": {
+    "paired": 168118,
+    "quarantine_timeline": 4251,
+    "unmatched_unverified": 1263,
+    "quarantine_multiple_outcomes": 57,
+    "quarantine_unknown_outcome": 40,
+    "unresolved_before_reintake": 36,
+    "quarantine_time_order": 1
+  },
+  "unmatched_outcome_records": 1215,
+  "baseline_cat_dog_paired_rows": 158231,
+  "censoring_policy": "Unmatched records are unresolved, not confirmed still in care; no survival cohort claimed.",
+  "timestamp_policy": "Naive Austin local times; offset-bearing or DST-ambiguous events quarantine the animal timeline.",
+  "split_counts": {
+    "train": 132815,
+    "excluded": 18899,
+    "test": 12929,
+    "validation": 9123
+  },
+  "split_positive_counts": {
+    "excluded": 2056,
+    "test": 3217,
+    "train": 24663,
+    "validation": 2514
+  }
+}

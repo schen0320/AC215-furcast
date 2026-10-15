@@ -1,0 +1,50 @@
+{
+  "archive_image_files": 7390,
+  "listed_images": 7349,
+  "listed_image_missing": 0,
+  "archive_decode_failures": 0,
+  "listed_decode_or_missing_failures": 0,
+  "extra_unlisted_image_files": 41,
+  "exact_duplicate_pairs": 0,
+  "perceptual_candidate_pairs": 48,
+  "cross_split_candidate_pairs": 28,
+  "candidate_pairs_with_different_class": 0,
+  "original_split_counts": {
+    "test": 3669,
+    "train": 2944,
+    "validation": 736
+  },
+  "clean_split_counts": {
+    "test": 3669,
+    "train": 2922,
+    "validation": 730,
+    "excluded": 28
+  },
+  "clean_split_class_counts": {
+    "test": 37,
+    "train": 37,
+    "validation": 37
+  },
+  "candidate_rule": "64-bit DCT pHash Hamming <=6 OR exact oriented RGB pixels; candidates are not confirmed identities",
+  "scope": "No global guarantee of animal independence. Crops/other photographs of the same animal and cross-dataset duplicates may be missed.",
+  "manual_review": "Pending for perceptual candidates; development-side cross-split candidates conservatively excluded without changing official test membership.",
+  "annotation_audit": {
+    "list_rows": 7349,
+    "trainval_rows": 3680,
+    "test_rows": 3669,
+    "classes": 37,
+    "breed_count_by_species": {
+      "1": 12,
+      "2": 25
+    },
+    "missing_trimaps": 0,
+    "missing_head_xml": 3678,
+    "provisional_split_counts": {
+      "test": 3669,
+      "train": 2944,
+      "validation": 736
+    },
+    "image_bytes_status": "Official image archive downloaded and decoded; see this image audit",
+    "readme_issues": "Breed counts reversed in README; archive research-only note differs from live CC BY-SA 4.0 page."
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "listed_images": 20580,
+  "archive_images": 20580,
+  "classes": 120,
+  "decode_or_missing_failures": 0,
+  "invalid_or_missing_bbox_rows": 2,
+  "original_split_counts": {
+    "train": 9600,
+    "test": 8580,
+    "validation": 2400
+  },
+  "clean_split_counts": {
+    "train": 9490,
+    "test": 8550,
+    "validation": 2375,
+    "excluded": 165
+  },
+  "clean_split_class_counts": {
+    "test": 120,
+    "train": 120,
+    "validation": 120
+  },
+  "all_joint_candidate_pairs": 292,
+  "cross_dataset_candidate_pairs": 56,
+  "exact_pixel_pairs": 89,
+  "exported_images": 20415,
+  "export_zip_bytes": 326734153,
+  "raw_download_manifest": {
+    "complete": true,
+    "files": [
+      {
+        "name": "lists.tar",
+        "url": "http://vision.stanford.edu/aditya86/ImageNetDogs/lists.tar",
+        "bytes": 481280,
+        "sha256": "34b47cacd9a98b5d150e084f24d29391c084c55272295ec65c85651bc35f4d6c",
+        "retrieved_at": "2026-10-15T01:55:31.874187+00:00"
+      },
+      {
+        "name": "annotation.tar",
+        "url": "http://vision.stanford.edu/aditya86/ImageNetDogs/annotation.tar",
+        "bytes": 21852160,
+        "sha256": "662ed36f707be6b195c2fda392d8e153e83af28cedc8e2134a649f198def30fd",
+        "retrieved_at": "2026-10-15T01:55:48.844874+00:00"
+      },
+      {
+        "name": "images.tar",
+        "url": "http://vision.stanford.edu/aditya86/ImageNetDogs/images.tar",
+        "bytes": 793579520,
+        "sha256": "a443fc2f9a851aa1a7b8e4fa4af94b8459fce2c9f5a2f4dd4669cf9673a4ec58",
+        "retrieved_at": "2026-10-15T02:01:26.790506+00:00"
+      }
+    ],
+    "license_status": "Official page/README request citation; no explicit image redistribution or commercial license found. ImageNet image rights remain relevant.",
+    "transport": "Official download links use HTTP; local hashes identify bytes but are not publisher-signed integrity proofs."
+  },
+  "scope": "Independent Stanford breed benchmark. No adoption labels; no cat breeds or shelter-domain coverage guarantee. Oxford/Stanford label mapping needs review before joint model training.",
+  "duplicate_review": "pHash <=6 candidate components isolated by test > validation > train priority; human review pending. Does not prove same-animal independence.",
+  "bbox_policy": "Audited only. Full images used; invalid boxes do not silently crop data.",
+  "pixel_preprocessing": "RGB EXIF transpose, fit inside 224x224 without upscaling small images, gray padding, JPEG quality 90; fixed train/validation/test transforms; augmentation left to model owner.",
+  "exclusion_breakdown": {
+    "('test', 'exact_pixel_label_conflict')": 30,
+    "('train', 'cross_split_duplicate_candidate')": 79,
+    "('train', 'exact_pixel_label_conflict')": 31,
+    "('validation', 'cross_split_duplicate_candidate')": 12,
+    "('validation', 'exact_pixel_label_conflict')": 13
+  },
+  "exact_pixel_label_conflict_interpretation": "The full image appears under different breed labels. Distinct annotated target boxes may explain this; it is not automatically a source annotation error. This full-image baseline quarantines such records.",
+  "official_test_comparability": "30 original test records excluded due to full-image label conflicts. The retained 8,550-image test cohort is a filtered benchmark and must not be presented as the complete official 8,580-image test.",
+  "image_export_validation": {
+    "zip_crc": "passed",
+    "manifest_membership": "exact match",
+    "sampled_rgb_224_decodes": 12,
+    "sha256": "a75f9bc5bf1338484cc382144cb760ae555cd04f082e2d5a7879ef56034358bf"
+  },
+  "additional_oxford_exclusions_if_joint_training": 31
+}

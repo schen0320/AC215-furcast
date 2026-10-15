@@ -218,3 +218,55 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# FurCast data workstream additions
+# Python / local tooling
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.idea/
+.vscode/
+
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+.kaggle/
+kaggle.json
+access_token
+*.pem
+*.key
+
+# Source data, outputs, images and fitted artifacts stay outside Git.
+raw/
+data/
+snapshots/
+results/
+results_*/
+outputs/
+downloads/
+*.csv
+*.tsv
+*.parquet
+*.npz
+*.npy
+*.joblib
+*.pkl
+*.pt
+*.pth
+*.h5
+*.jpg
+*.jpeg
+*.png
+*.webp
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.bin
+*.partial
+*.assembling

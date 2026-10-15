@@ -1,0 +1,109 @@
+{
+  "raw_intakes": {
+    "rows": 18518,
+    "columns": [
+      "id",
+      "source_date",
+      "animal_id",
+      "type",
+      "source_name",
+      "name_at_intake",
+      "ispreviouslyspayedneutered",
+      "sex",
+      "primary_breed",
+      "primary_color",
+      "date_of_birth",
+      "found_address",
+      "timestamp",
+      "intake_health_condition",
+      "secondary_color"
+    ],
+    "duplicate_rows": 0,
+    "null_counts": {
+      "id": 0,
+      "source_date": 0,
+      "animal_id": 0,
+      "type": 0,
+      "source_name": 0,
+      "name_at_intake": 7594,
+      "ispreviouslyspayedneutered": 0,
+      "sex": 21,
+      "primary_breed": 0,
+      "primary_color": 0,
+      "date_of_birth": 1591,
+      "found_address": 85,
+      "timestamp": 0,
+      "intake_health_condition": 15445,
+      "secondary_color": 8771
+    },
+    "repeated_animal_rows": 738
+  },
+  "raw_outcomes": {
+    "rows": 18501,
+    "columns": [
+      "id",
+      "outcome_date",
+      "animal_id",
+      "name",
+      "outcome_status",
+      "euthanasia_reason",
+      "type",
+      "sex",
+      "spayed_neutered",
+      "primary_breed",
+      "primary_color",
+      "secondary_color",
+      "date_of_birth",
+      "intake_date",
+      "days_in_shelter",
+      "timestamp"
+    ],
+    "duplicate_rows": 0,
+    "null_counts": {
+      "id": 0,
+      "outcome_date": 0,
+      "animal_id": 0,
+      "name": 7506,
+      "outcome_status": 0,
+      "euthanasia_reason": 17308,
+      "type": 0,
+      "sex": 31,
+      "spayed_neutered": 17,
+      "primary_breed": 0,
+      "primary_color": 0,
+      "secondary_color": 8847,
+      "date_of_birth": 1511,
+      "intake_date": 0,
+      "days_in_shelter": 0,
+      "timestamp": 0
+    },
+    "repeated_animal_rows": 793
+  },
+  "cutoff": "2026-10-11 19:00:00-05:00",
+  "horizon_days": 30,
+  "bad_timeline_animal_count": 0,
+  "status_counts": {
+    "paired": 17305,
+    "unmatched_unverified": 1143,
+    "quarantine_multiple_outcomes": 46,
+    "unresolved_before_reintake": 12,
+    "quarantine_unknown_outcome": 10,
+    "quarantine_time_order": 2
+  },
+  "unmatched_outcome_records": 1088,
+  "baseline_cat_dog_paired_rows": 16213,
+  "censoring_policy": "Unmatched records are unresolved, not confirmed still in care; no survival cohort claimed.",
+  "timestamp_policy": "Naive Austin local times; offset-bearing or DST-ambiguous events quarantine the animal timeline.",
+  "split_counts": {
+    "train": 6836,
+    "validation": 4816,
+    "excluded": 4054,
+    "test": 2812
+  },
+  "split_positive_counts": {
+    "excluded": 1340,
+    "test": 246,
+    "train": 1932,
+    "validation": 532
+  }
+}

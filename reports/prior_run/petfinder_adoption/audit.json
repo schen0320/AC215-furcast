@@ -1,0 +1,118 @@
+{
+  "actual_train_rows": 14993,
+  "actual_official_test_rows": 3972,
+  "official_test_has_target": false,
+  "original_target_counts": {
+    "0": 410,
+    "1": 3090,
+    "2": 4037,
+    "3": 3259,
+    "4": 4197
+  },
+  "raw_missing": {
+    "Type": 0,
+    "Name": 1265,
+    "Age": 0,
+    "Breed1": 0,
+    "Breed2": 0,
+    "Gender": 0,
+    "Color1": 0,
+    "Color2": 0,
+    "Color3": 0,
+    "MaturitySize": 0,
+    "FurLength": 0,
+    "Vaccinated": 0,
+    "Dewormed": 0,
+    "Sterilized": 0,
+    "Health": 0,
+    "Quantity": 0,
+    "Fee": 0,
+    "State": 0,
+    "RescuerID": 0,
+    "VideoAmt": 0,
+    "Description": 13,
+    "PetID": 0,
+    "PhotoAmt": 0,
+    "AdoptionSpeed": 0,
+    "source_partition": 0
+  },
+  "quantity_one_raw": 11565,
+  "train_schema_review_rows": 12,
+  "train_external_overlap_rows": 4,
+  "eligible_labeled_rows": 11553,
+  "internal_splits": {
+    "train": {
+      "shape": [
+        6931,
+        290
+      ],
+      "class_counts": {
+        "0": 197,
+        "1": 1462,
+        "2": 1897,
+        "3": 1531,
+        "4": 1844
+      },
+      "slow_class_3_or_4_count": 3375,
+      "with_default_photo": 6787
+    },
+    "validation": {
+      "shape": [
+        2311,
+        290
+      ],
+      "class_counts": {
+        "0": 66,
+        "1": 488,
+        "2": 632,
+        "3": 510,
+        "4": 615
+      },
+      "slow_class_3_or_4_count": 1125,
+      "with_default_photo": 2263
+    },
+    "test": {
+      "shape": [
+        2311,
+        290
+      ],
+      "class_counts": {
+        "0": 66,
+        "1": 488,
+        "2": 632,
+        "3": 510,
+        "4": 615
+      },
+      "slow_class_3_or_4_count": 1125,
+      "with_default_photo": 2268
+    }
+  },
+  "group_count": 4240,
+  "largest_eligible_group": 976,
+  "image_counts": {
+    "train": 58311,
+    "test": 14465
+  },
+  "decode_failures": 0,
+  "train_photo_count_mismatch": 0,
+  "train_without_default_photo": 341,
+  "outcome_description_flag_train_rows": 1341,
+  "single_primary_candidate_rows": 8312,
+  "named_category_candidate_rows": 1358,
+  "named_candidate_categories_by_species": {
+    "1": 83,
+    "2": 40
+  },
+  "prepared_default_images": 11318,
+  "prepared_zip_bytes": 153239169,
+  "prepared_zip_sha256": "75c68bc5f51361b828763fc4912b9e8d758e57a3f2982b68f0f5b87cfa0f3e3b",
+  "target": "AdoptionSpeed 0..4; optional slow_listing_risk_label=(class 3 or 4), NOT LOS days",
+  "split_method": "5-fold StratifiedGroupKFold, seed 215; fold 0 test, 1 validation, 2..4 train; rescuer + image/text connected components before filtering",
+  "grouping_scope": "All train and unlabeled test profiles included as identity bridges only; unlabeled data do not fit encoders or enter scores",
+  "temporal_status": "No listing dates provided; NOT a temporal validation. Collection/feature-time provenance unverified.",
+  "duplicate_status": "Machine exact/pHash candidates conservatively grouped; human identity review pending",
+  "taxonomy_status": "Listing-owner labels, generic/mixed categories and imbalance; named candidates are NOT verified pure-breed images",
+  "optional_json_files": 91083,
+  "optional_json_malformed": 0,
+  "model_training": "Not run; preprocessing only; no model-performance claims"
+}
