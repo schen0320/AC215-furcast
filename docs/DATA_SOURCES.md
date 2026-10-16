@@ -9,7 +9,7 @@ Status date: 2026-10-15. Counts below refer to the earlier audited snapshots. A 
 | PetFinder Adoption Prediction | https://www.kaggle.com/competitions/petfinder-adoption-prediction/data | Listing fields, photos, optional metadata/sentiment JSON; AdoptionSpeed 0–4 | Individual authorized Kaggle access and applicable competition rules: https://www.kaggle.com/competitions/petfinder-adoption-prediction/rules . Do not redistribute raw files publicly. |
 | Austin legacy | https://data.austintexas.gov/resource/wter-evkm.json and https://data.austintexas.gov/resource/9t4d-g238.json | Intake and outcome events, paired into episodes | Earlier metadata identified Public Domain; repeated admissions require event pairing. |
 | Austin current | https://data.austintexas.gov/resource/pyqf-r2dc.json and https://data.austintexas.gov/resource/gsvs-ypi7.json | New-system intake and outcome events | License metadata was unspecified in the earlier snapshot. Do not assume old/new animal IDs correspond. |
-| PetFinder Pawpularity | https://www.kaggle.com/competitions/petfinder-pawpularity-score/data | `Id`, 12 binary visual attributes, `Pawpularity` 1–100 | Separate rules: https://www.kaggle.com/competitions/petfinder-pawpularity-score/rules . Real files remain unavailable in this handoff. |
+| PetFinder Pawpularity | https://www.kaggle.com/competitions/petfinder-pawpularity-score/data | `Id`, 12 binary visual attributes, `Pawpularity` 1–100 | Separate rules: https://www.kaggle.com/competitions/petfinder-pawpularity-score/rules . Team-supplied real ZIP verified and preprocessed on 2026-10-16; original/derived images remain outside Git. |
 
 The access/rights observations above record the existing source review, not a new legal review or renewed download in this repository setup.
 
@@ -37,8 +37,12 @@ Austin acquisition checks counts and update metadata around the snapshot, record
 
 Kaggle files require a separately authenticated local Kaggle CLI/session and acceptance of the relevant rules. Do not put API keys in code, chat, committed `.env` files or command arguments. No credential setup or Kaggle retry is performed by this GitHub initialization.
 
-## Pawpularity blocker
+## Pawpularity acquisition and preprocessing
 
-Earlier browser attempts failed to deliver files. The subsequent cloud terminal CLI returned **Authentication required to call the Kaggle API**; an independent public-file download succeeded. Browser sign-in does not authenticate the terminal CLI. The exact browser-download failure cause remains unconfirmed.
+Earlier Kaggle downloads were blocked by authentication. On 2026-10-16 the team supplied an original ZIP through Drive; its 1,030,728,211 bytes were downloaded, and its SHA-256 was recorded as `6b57735ba5e6041c79b73833fff267db54e425134efbab42728e3025c712153c`.
 
-The official page showed 9,912 training IDs, 14 columns and approximately 1.04 GB. Those are **page metadata**, not local measurements. Real missingness, corrupt-image counts and duplicate rates remain unmeasured. Official downloadable `test/` and `test.csv` are synthetic interface examples, not a real held-out animal dataset. They must not enter training or evaluation.
+Local measurements: 9,912 training records, 14 columns, 9,912 training photos, and 8 unlabeled example records/photos. All 9,920 source images decoded. These counts are from actual files, not website metadata. Example test data and sample-submission scores are not evaluation ground truth and are excluded from modeling.
+
+Preprocessing compared 100,705 prior-source fingerprints with all Pawpularity photos. Conservative cross-source quarantine removed 2,101 records from this modeling cohort, leaving 7,811 images with fixed group-disjoint splits. Candidate lists are retained for review; near matches are not confirmed same-animal identities. No rows were deleted from the original ZIP.
+
+The older October 15 handoff remains a historical diagnostic document. Current results and model recommendations: [PAWPULARITY_TRAINING.md](PAWPULARITY_TRAINING.md). Obtaining files does not grant redistribution rights; use the official competition terms and authorized team access.

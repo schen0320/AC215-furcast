@@ -1,0 +1,99 @@
+{
+  "status": "completed_on_supplied_local_files",
+  "source_train_rows": 9912,
+  "source_example_test_rows": 8,
+  "decode_failures": 0,
+  "retained_duplicate_components": 7795,
+  "external_images_checked": 100705,
+  "pawpularity_involved_candidate_pairs": 2245,
+  "retained_rows": 7811,
+  "split_counts": {
+    "train": 4689,
+    "validation": 1562,
+    "test": 1560
+  },
+  "exclusion_counts": {
+    "": 7811,
+    "cross_source_duplicate_candidate": 2101
+  },
+  "score_distribution_by_split": {
+    "count": {
+      "test": 1560.0,
+      "train": 4689.0,
+      "validation": 1562.0
+    },
+    "mean": {
+      "test": 37.22948717948718,
+      "train": 37.80038387715931,
+      "validation": 38.12868117797695
+    },
+    "std": {
+      "test": 20.268306822304332,
+      "train": 20.37277992736013,
+      "validation": 21.319315634973908
+    },
+    "min": {
+      "test": 1.0,
+      "train": 1.0,
+      "validation": 1.0
+    },
+    "25%": {
+      "test": 24.0,
+      "train": 25.0,
+      "validation": 25.0
+    },
+    "50%": {
+      "test": 32.0,
+      "train": 33.0,
+      "validation": 33.0
+    },
+    "75%": {
+      "test": 45.0,
+      "train": 46.0,
+      "validation": 47.0
+    },
+    "max": {
+      "test": 100.0,
+      "train": 100.0,
+      "validation": 100.0
+    }
+  },
+  "metadata_positive_counts": {
+    "Subject Focus": 274,
+    "Eyes": 7658,
+    "Face": 8960,
+    "Near": 8540,
+    "Action": 99,
+    "Accessory": 672,
+    "Group": 1282,
+    "Collage": 492,
+    "Human": 1648,
+    "Occlusion": 1705,
+    "Info": 607,
+    "Blur": 698
+  },
+  "blur_eyes_review_rows": 0,
+  "identical_pixel_groups_with_different_scores": 0,
+  "train_csv_sha256": "e4abd43ce55f42388d3bcb9cfcb97168c6a3387aa8dd694da1d3bf1bfac65d0c",
+  "external_fingerprints": [
+    {
+      "file": "breed_fingerprints.csv",
+      "sha256": "d7c15280450783724119068e668574f65ad1884d1770181b2f0ff9d7b28ba30d",
+      "rows": 27929
+    },
+    {
+      "file": "petfinder_fingerprints.csv",
+      "sha256": "0dc2e76058f046d8b646c8e0e8f21f79d885554d41f34285e69c71443f6b25ff",
+      "rows": 72776
+    }
+  ],
+  "split_rule": "Seed 215, GroupShuffleSplit approximately 60/20/20 groups; no target-based seed selection",
+  "dedup_rule": "Exact oriented RGB pixels or 64-bit DCT pHash Hamming <=6, transitive components; exclude every component touching previous sources",
+  "identity_limit": "No rescuer/animal/time IDs available. Different views of the same animal may escape. This is not prospective/temporal validation.",
+  "score_conflicts": "Retained within the same image component; score can differ by profile exposure/context. Not silently averaged or relabeled.",
+  "input_policy": "Photo pixels only. Id/path/split are bookkeeping; metadata are optional auxiliary targets. Never join AdoptionSpeed or LOS as this target.",
+  "image_transform": "EXIF oriented RGB, preserve aspect, no upscaling, centered gray letterbox 300x300, JPEG quality90; no augmentation or model normalization",
+  "model_training": "not performed",
+  "prepared_images_exported": true,
+  "prepared_zip_sha256": "5fe966d538969f897c31a6098f552810db6f58434be5fb5869fc1682afdfe923"
+}

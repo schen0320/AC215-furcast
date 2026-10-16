@@ -1,0 +1,27 @@
+{
+  "dataset_version": "pawpularity-v1-2026-10-16",
+  "source_zip_sha256": "6b57735ba5e6041c79b73833fff267db54e425134efbab42728e3025c712153c",
+  "source_zip_bytes": 1030728211,
+  "source_drive_url": "https://drive.google.com/file/d/1cc09nfaW1kbKOF0LWMwRUfqSwlgg6vCd/view",
+  "base_repository_commit": "f40f67f5732fb772062daed08870d684d67bdd0c",
+  "python": "3.12.14",
+  "packages": {
+    "pandas": "2.2.3",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0",
+    "Pillow": "12.3.0"
+  },
+  "code_sha256": {
+    "prepare_pawpularity.py": "33aed0691921da72e45db08d7a595248104acf46aaca25ba400993d58e47eb93",
+    "find_petfinder_duplicates.py": "007a74ec6ef6c383719f631aa671e798f807175cfabb02326e37c721815743f2",
+    "audit_oxford_images.py": "486dcfc0a83f83f1d1807dc8ae552dbfa71f78932c2005d74f7a5aae9eeeaea0",
+    "furcast_data.py": "d215afbe6bc967eaf665cda2b854a86719b5d9c64e1ca9aa0094855f62f10c66",
+    "validate_pawpularity_outputs.py": "00cbe2def56d761ad8b2e8201be3930928f19f2e3a205b0f5c1273a99cd479f5"
+  },
+  "size": 300,
+  "seed": 215,
+  "dvc_remote_configured": false,
+  "visual_models_trained": false,
+  "source_archive_not_in_delivery": "Original ZIP stays in Drive; processed ZIP and fingerprint inputs are delivered separately."
+}

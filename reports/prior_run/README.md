@@ -7,4 +7,4 @@ These aggregate JSON reports were copied from the previously delivered v0.4 star
 - `oxford/image_audit.json`: annotated-image/decode and candidate-duplicate audit.
 - `stanford_dogs/audit.json`: image/class counts, exclusions and filtered benchmark limitations.
 
-Historical archive-size or hash values identify the run artifact at the recorded step. A later repackaged ZIP may differ; use the checksum manifest shipped with the exact package when verifying bytes. No Pawpularity real-data audit exists.
+Historical archive-size or hash values identify the run artifact at the recorded step. A later repackaged ZIP may differ; use the checksum manifest shipped with the exact package when verifying bytes. This historical directory predates Pawpularity acquisition. Its real October 16 audit is in `../pawpularity_2026-10-16/`.

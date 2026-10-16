@@ -770,140 +770,140 @@
     "source_field": "Id",
     "canonical_field": "Id",
     "role": "record_key_only",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "string",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Pawpularity",
     "canonical_field": "Pawpularity",
     "role": "separate_engagement_regression_target_not_AdoptionSpeed_or_LOS",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Subject Focus",
     "canonical_field": "Subject Focus",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Eyes",
     "canonical_field": "Eyes",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Face",
     "canonical_field": "Face",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Near",
     "canonical_field": "Near",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Action",
     "canonical_field": "Action",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Accessory",
     "canonical_field": "Accessory",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Group",
     "canonical_field": "Group",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Collage",
     "canonical_field": "Collage",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Human",
     "canonical_field": "Human",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Occlusion",
     "canonical_field": "Occlusion",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Info",
     "canonical_field": "Info",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "petfinder-pawpularity-score",
     "source_field": "Blur",
     "canonical_field": "Blur",
     "role": "human_visual_annotation_not_assumed_available_at_inference",
-    "evidence": "Official live data explorer and 14-column train.csv preview verified 2026-10-15; full local files NOT acquired or audited",
+    "evidence": "Team-supplied original ZIP read and checked 2026-10-16: 9,912 labeled rows, 14 fields, 9,920 decoded images; real preprocessing completed separately",
     "source_url": "https://www.kaggle.com/competitions/petfinder-pawpularity-score/data?select=train.csv",
     "source_type": "integer",
-    "local_values_verified": false
+    "local_values_verified": true
   },
   {
     "dataset_id": "oxford_iiit_pet",

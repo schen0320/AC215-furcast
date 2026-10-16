@@ -71,6 +71,10 @@ class PawGuards(unittest.TestCase):
             self.assertEqual(labels.loc[labels.Id.isin([f'{23:032x}',f'{24:032x}'])].split.nunique(),1)
             self.assertEqual(labels.loc[labels.Id.eq(f'{0:032x}'),'split'].iloc[0],'excluded')
             with ZipFile(root/'photos.zip') as z:self.assertEqual(len(z.namelist()),23)
+            # Same data/config should not acquire a new archive version merely
+            # because ZIP timestamps changed on a rerun.
+            repeated=prepare(raw,root/'repeat',[root/'external.csv'],root/'photos_repeat.zip',workers=1)
+            self.assertEqual(report['prepared_zip_sha256'],repeated['prepared_zip_sha256'])
             # Removing a source photo must fail before producing a successful audit.
             (raw/'train'/f'{1:032x}.jpg').unlink()
             with self.assertRaisesRegex(ValueError,'missing=1'):

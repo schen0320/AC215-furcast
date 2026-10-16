@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "validated_prepared_images": 7811,
+  "prepared_size": [
+    300,
+    300
+  ],
+  "prepared_zip_sha256": "5fe966d538969f897c31a6098f552810db6f58434be5fb5869fc1682afdfe923",
+  "split_counts": {
+    "train": 4689,
+    "validation": 1562,
+    "test": 1560
+  },
+  "cross_source_pairs_quarantined": 2218,
+  "detected_duplicate_components_crossing_splits": 0,
+  "train_mean_reference": {
+    "prediction": 37.80038387715931,
+    "validation_rmse": 21.3150185711158,
+    "validation_mae": 15.928254047053214,
+    "test_evaluated": false,
+    "note": "Constant statistical reference, not a trained image model."
+  },
+  "limits": "Checks detected duplicate links only; does not establish complete animal identity or temporal independence."
+}

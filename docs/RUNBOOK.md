@@ -90,7 +90,7 @@ y = labels['AdoptionSpeed'].astype(int)
 
 Do not append every column from the labels/audit CSVs to X. The ID, split, target, duplicate group and outcome-review fields are not ordinary model features.
 
-## Pawpularity — pending real input
+## Pawpularity — real preprocessing completed 2026-10-16
 
 After obtaining authorized real data, extract it to a directory containing `train.csv` and `train/{Id}.jpg`. Record archive hash and acquisition time, then:
 
@@ -111,7 +111,13 @@ python prepare_pawpularity.py --raw /path/to/pawpularity_original \
   --out results_pawpularity_direct --export-images outputs/Pawpularity_Photos_300.zip
 ```
 
-Expected outputs include separate image inputs, target labels, auxiliary visual labels, duplicate candidates, review tables, audit and prepared photos. Missing inputs must not be replaced with test fixtures. Official synthetic example test data are excluded from modeling. The real command above has **not** been executed successfully in this handoff.
+Expected outputs include separate image inputs, target labels, auxiliary visual labels, duplicate candidates, review tables, audit and prepared photos. Missing inputs must not be replaced with test fixtures. Official synthetic example test data are excluded from modeling. The direct command was executed on real files on 2026-10-16, using 4 workers and 300-pixel images. It produced 7,811 eligible images; see `reports/pawpularity_2026-10-16/audit.json`. Validate saved outputs with:
+
+```bash
+python validate_pawpularity_outputs.py --out results_pawpularity_direct --photos outputs/Pawpularity_Photos_300.zip
+```
+
+Use `requirements-pawpularity.lock.txt` for the exact preprocessing package versions of that run.
 
 ## Checks and run status
 

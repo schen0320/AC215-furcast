@@ -1,17 +1,63 @@
 {
-  "version": "0.5.0",
-  "updated_at": "2026-10-15",
-  "repository_scope": "Code, field contracts and aggregate prior-run audits only; no source data or fitted artifacts",
+  "version": "0.6.0",
+  "updated_at": "2026-10-16",
+  "repository_scope": "Code, field contracts, prior-run audits and real Pawpularity preprocessing audit; no source data or fitted models",
   "prior_data_package_version": "0.4.0",
   "components": {
-    "austin": {"real_data_acquired": true, "prior_preprocessing_executed": true, "target": "observed all-exit LOS; separate legacy/current cohorts", "raw_files_in_repository": false},
-    "petfinder_adoption": {"real_data_acquired": true, "prior_preprocessing_executed": true, "eligible_labeled_rows": 11553, "target": "AdoptionSpeed 0..4, not LOS", "raw_files_in_repository": false},
-    "oxford": {"real_data_acquired": true, "prior_preprocessing_executed": true, "annotated_image_ids": 7349, "classes": 37, "raw_files_in_repository": false},
-    "stanford_dogs": {"real_data_acquired": true, "prior_preprocessing_executed": true, "prepared_images": 20415, "classes": 120, "raw_files_in_repository": false},
-    "pawpularity": {"real_data_acquired": false, "prior_preprocessing_executed": false, "pipeline_available": true, "validation_scope": "synthetic fixtures only", "local_real_csv_count": 0, "local_real_image_count": 0, "blocker": "CLI authentication unavailable in previous attempt; browser download failure cause unconfirmed", "raw_files_in_repository": false}
+    "austin": {
+      "real_data_acquired": true,
+      "prior_preprocessing_executed": true,
+      "target": "observed all-exit LOS; separate legacy/current cohorts",
+      "raw_files_in_repository": false
+    },
+    "petfinder_adoption": {
+      "real_data_acquired": true,
+      "prior_preprocessing_executed": true,
+      "eligible_labeled_rows": 11553,
+      "target": "AdoptionSpeed 0..4, not LOS",
+      "raw_files_in_repository": false
+    },
+    "oxford": {
+      "real_data_acquired": true,
+      "prior_preprocessing_executed": true,
+      "annotated_image_ids": 7349,
+      "classes": 37,
+      "raw_files_in_repository": false
+    },
+    "stanford_dogs": {
+      "real_data_acquired": true,
+      "prior_preprocessing_executed": true,
+      "prepared_images": 20415,
+      "classes": 120,
+      "raw_files_in_repository": false
+    },
+    "pawpularity": {
+      "real_data_acquired": true,
+      "prior_preprocessing_executed": true,
+      "pipeline_available": true,
+      "validation_scope": "Real source labels/images, cross-source duplicate isolation, prepared image decode/hash validation; synthetic guards also passed",
+      "source_train_rows": 9912,
+      "source_unlabeled_example_rows": 8,
+      "source_image_count": 9920,
+      "prepared_images": 7811,
+      "cross_source_candidate_rows_quarantined": 2101,
+      "split_counts": {
+        "train": 4689,
+        "validation": 1562,
+        "test": 1560
+      },
+      "raw_files_in_repository": false,
+      "raw_archive_sha256": "6b57735ba5e6041c79b73833fff267db54e425134efbab42728e3025c712153c",
+      "visual_model_training_performed": false
+    }
   },
   "full_pipeline_rerun_during_repository_setup": false,
   "model_training_performed": false,
-  "next_required_input": "Authorized original Pawpularity ZIP or complete train.csv plus training images",
-  "open_reviews": ["human duplicate and taxonomy review", "prospective field/photo availability", "model evaluation and success thresholds", "frontend/container integration"]
+  "next_required_input": "Team selection of DVC remote and permissions; GPU/runtime for visual baseline training",
+  "open_reviews": [
+    "human duplicate and taxonomy review",
+    "prospective field/photo availability",
+    "model evaluation and success thresholds",
+    "frontend/container integration"
+  ]
 }

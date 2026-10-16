@@ -1,7 +1,7 @@
-"""Pawpularity image preparation. Requires authorized local original files.
+"""Prepare authorized Pawpularity files with cross-source duplicate isolation.
 
-As delivered on 2026-10-15 this script has synthetic guard-test coverage only;
-the official download failed, so no real Pawpularity outputs are claimed.
+Execution evidence belongs in the generated audit and dated reports. The code
+itself does not establish that data were downloaded or a model was trained.
 """
 import argparse
 from concurrent.futures import ProcessPoolExecutor
@@ -11,7 +11,7 @@ import json
 import os
 from pathlib import Path
 import tempfile
-from zipfile import ZipFile, ZIP_STORED
+from zipfile import ZipFile, ZipInfo, ZIP_STORED
 import pandas as pd
 from PIL import Image, ImageOps
 from sklearn.model_selection import GroupShuffleSplit
@@ -76,7 +76,7 @@ def group_and_split(images, external):
     result['split']='excluded';result['exclusion_reason']=''
     result.loc[~result.decode_ok,'exclusion_reason']='decode_failed'
     # Example test images never enter training, validation or real test.
-    result.loc[result.source_partition.eq('test'),'exclusion_reason']='synthetic_example_only'
+    result.loc[result.source_partition.eq('test'),'exclusion_reason']='unlabeled_example_only'
     cross=result.duplicate_component.isin(external_components)&result.source_partition.eq('train')
     result.loc[cross,'exclusion_reason']='cross_source_duplicate_candidate'
     keep=result.loc[result.exclusion_reason.eq('')].sort_values('key')
@@ -125,6 +125,7 @@ def prepare(raw, out, external_paths, export_images=None, size=300, workers=8):
     if not external:raise ValueError('Supply prior-source fingerprints for cross-source guard')
     external=pd.concat(external,ignore_index=True)
     tasks=[(str(raw),part,i) for part,df in [('train',train),('test',test)] for i in df.Id]
+    print(f'Inspecting {len(tasks)} local photos with {workers} workers',flush=True)
     if workers==1:rows=list(map(inspect_image,tasks))
     else:
         with ProcessPoolExecutor(max_workers=workers) as pool:
@@ -145,7 +146,7 @@ def prepare(raw, out, external_paths, export_images=None, size=300, workers=8):
         conflicts=real.loc[real.decode_ok].groupby('pixel_sha256').Pawpularity.nunique()
         conflicting=set(conflicts[conflicts>1].index)
         real.loc[real.pixel_sha256.isin(conflicting),['Id','pixel_sha256','Pawpularity','duplicate_component']].to_csv(out/'identical_photo_different_scores.csv',index=False)
-        active=real.loc[real.split.ne('excluded')].copy()
+        active=real.loc[real.split.ne('excluded')].sort_values('Id').copy()
         active['prepared_member']=active['split']+'/'+active.Id+'.jpg'
         active[['Id','source_file','prepared_member','split','duplicate_component']].to_csv(out/'image_inputs.csv',index=False)
         for s in ['train','validation','test']:
@@ -153,6 +154,9 @@ def prepare(raw, out, external_paths, export_images=None, size=300, workers=8):
         report={
             'status':'completed_on_supplied_local_files','source_train_rows':len(train),
             'source_example_test_rows':len(test),'decode_failures':int((~images.decode_ok).sum()),
+            'retained_duplicate_components':int(active.duplicate_component.nunique()),
+            'external_images_checked':len(external),
+            'pawpularity_involved_candidate_pairs':int((edges.id_a.str.startswith('pawpularity:')|edges.id_b.str.startswith('pawpularity:')).sum()),
             'retained_rows':len(active),'split_counts':active.split.value_counts().to_dict(),
             'exclusion_counts':real.exclusion_reason.value_counts().to_dict(),
             'score_distribution_by_split':active.groupby('split').Pawpularity.describe().to_dict(),
@@ -175,15 +179,22 @@ def prepare(raw, out, external_paths, export_images=None, size=300, workers=8):
             prepared=[]
             try:
                 with ZipFile(tmp,'w',ZIP_STORED) as z:
-                    for row in active.itertuples():
+                    for num,row in enumerate(active.itertuples(),1):
                         with Image.open(raw/row.source_file) as original:
                             im=ImageOps.exif_transpose(original).convert('RGB')
                             im.thumbnail((size,size),Image.Resampling.LANCZOS)
                             canvas=Image.new('RGB',(size,size),(127,127,127))
                             canvas.paste(im,((size-im.width)//2,(size-im.height)//2))
                             b=io.BytesIO();canvas.save(b,format='JPEG',quality=90)
-                        data=b.getvalue();z.writestr(row.prepared_member,data)
+                        data=b.getvalue()
+                        # Fixed archive metadata makes reruns byte-reproducible
+                        # with the same source, split, dependencies and settings.
+                        entry=ZipInfo(row.prepared_member,date_time=(1980,1,1,0,0,0))
+                        entry.compress_type=ZIP_STORED;entry.create_system=3
+                        entry.external_attr=0o100644<<16
+                        z.writestr(entry,data)
                         prepared.append({'Id':row.Id,'prepared_member':row.prepared_member,'sha256':hashlib.sha256(data).hexdigest()})
+                        if num%1000==0:print(f'Exported {num}/{len(active)} photos',flush=True)
                 with ZipFile(tmp) as z:
                     if z.testzip() is not None:raise ValueError('Export CRC failure')
                 os.replace(tmp,export)
