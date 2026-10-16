@@ -3,7 +3,7 @@ Harvard AC215 Group 17 project: pet breed identification, adoption risk predicti
 
 ## 数据工作区 / Data workstream
 
-Sam's data acquisition, preprocessing and leakage checks, prepared for team handoff on **2026-10-15**.
+Sam's data acquisition, preprocessing and leakage checks, updated with real Pawpularity preprocessing on **2026-10-16**.
 This repository contains code, field contracts and aggregate audit reports. The separately delivered data packages contain the actual datasets, frozen splits and prepared images. Cloning this repository does **not** download them.
 
 | Source | Task | Verified prior work | In this repository |
@@ -12,9 +12,9 @@ This repository contains code, field contracts and aggregate audit reports. The 
 | Stanford Dogs | Dog breed classification | 20,580 original images; 20,415 prepared images, 120 classes | Code and aggregate audit |
 | PetFinder Adoption Prediction | AdoptionSpeed ordinal classification | 14,993 labeled profiles; conservative cohort 11,553; 72,776 images audited | Code and aggregate audit |
 | Austin Animal Center | Observed all-exit length of stay (LOS) | Separate legacy/current snapshots, episode pairing, temporal/animal splits and sparse features | Code and aggregate audits |
-| PetFinder Pawpularity | Photo/profile engagement regression | Official schema checked; pipeline tested with synthetic fixtures | **No real CSV/images acquired or processed** |
+| PetFinder Pawpularity | Photo/profile engagement regression | 9,912 labeled originals checked; 7,811 prepared photos after cross-source quarantine; fixed 4,689/1,562/1,560 split | Code, real-run aggregate audit and model recommendations |
 
-These are earlier snapshot results, not a new full-data run from this repository. No predictive model has been trained by this data handoff. Frontend and container integration remain separate team workstreams.
+Oxford, Stanford, PetFinder Adoption and Austin entries describe earlier snapshot results. Pawpularity was processed on actual files on October 16; see [the completed run and training plan](docs/PAWPULARITY_TRAINING.md). No predictive model has been trained by this data handoff. Frontend and container integration remain separate team workstreams.
 
 ## Start here
 
@@ -31,6 +31,7 @@ python run_data_pipeline.py --help
 
 The tests use synthetic fixtures; they do not download data or establish model accuracy.
 
+- [Pawpularity processing results and model recommendations](docs/PAWPULARITY_TRAINING.md)
 - [中文交接与分工](docs/HANDOFF_ZH.md)
 - [Data access and dataset limits](docs/DATA_SOURCES.md)
 - [Run commands and required local files](docs/RUNBOOK.md)
