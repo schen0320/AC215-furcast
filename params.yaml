@@ -1,0 +1,5 @@
+pawpularity:
+  image_size: 300
+  workers: 4
+# Seed 215 and pHash distance <=6 remain fixed by prepare_pawpularity.py
+# and TARGETS_AND_SPLITS.md. They are not tunable model-selection parameters.

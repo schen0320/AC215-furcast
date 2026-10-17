@@ -270,3 +270,15 @@ downloads/
 *.bin
 *.partial
 *.assembling
+
+# DVC managed payloads. Keep artifacts/*.dvc pointers visible to Git.
+/artifacts/inputs/*
+!/artifacts/inputs/*.dvc
+!/artifacts/inputs/.gitignore
+/artifacts/reference/
+/artifacts/raw/
+/artifacts/processed/
+/artifacts/validation/
+/artifacts/delivery/
+/artifacts/.delivery-*/
+/artifacts/raw/.pawpularity-*/

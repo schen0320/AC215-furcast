@@ -17,7 +17,9 @@ from PIL import Image
 from furcast_data import PAW, verify_splits
 
 
-def validate(out, photos, size=300):
+def validate(out, photos, size=300, report_path=None):
+    if not __debug__:
+        raise RuntimeError('Validation requires assertions; do not use python -O')
     out, photos = Path(out), Path(photos)
     read = lambda name: pd.read_csv(out / name, dtype={'Id': str}, keep_default_na=False)
     labels = read('labels_and_splits.csv')
@@ -80,7 +82,9 @@ def validate(out, photos, size=300):
         },
         'limits': 'Checks detected duplicate links only; does not establish complete animal identity or temporal independence.'
     }
-    (out/'output_validation.json').write_text(json.dumps(result, indent=2)+'\n')
+    report_path = Path(report_path) if report_path else out/'output_validation.json'
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(json.dumps(result, indent=2)+'\n')
     return result
 
 
@@ -89,5 +93,6 @@ if __name__ == '__main__':
     parser.add_argument('--out', required=True)
     parser.add_argument('--photos', required=True)
     parser.add_argument('--size', type=int, default=300)
+    parser.add_argument('--report', help='Separate report path, avoids mutating DVC dependencies')
     args = parser.parse_args()
-    print(json.dumps(validate(args.out, args.photos, args.size), indent=2))
+    print(json.dumps(validate(args.out, args.photos, args.size, args.report), indent=2))

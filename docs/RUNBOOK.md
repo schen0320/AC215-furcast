@@ -129,3 +129,7 @@ python -m compileall -q .
 The suite covers episode pairing, future outcomes, transfer/adoption distinctions, unresolved episodes, group isolation, feature exclusions, image duplicate radius search, Pawpularity synthetic export/input checks and wrapper path dependencies. It does not certify model performance or eliminate unknown timestamp/identity risks.
 
 The wrapper writes `run_status.json` after execution begins, including partial/failed stages. Input preflight failures exit before creating an output directory. With no data, it can produce a status report with zero completed stages; this is not a successful dataset build. Never infer acquisition from a zero exit code alone. Keep failed outputs for diagnosis and choose a new directory for retries.
+
+## DVC-managed Pawpularity reproduction
+
+Use [docs/DVC.md](DVC.md) for the pinned environment, verified delivery import, raw-data preflight, DVC pipeline and local remote roundtrip. `dvc repro validate_delivery` revalidates existing real outputs; `dvc repro validate_pawpularity` requires the original ZIP and rebuilds from raw data. These are separate evidence claims.
