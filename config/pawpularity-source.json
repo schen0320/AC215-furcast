@@ -1,0 +1,13 @@
+{
+  "version": "pawpularity-v1-2026-10-16",
+  "archive_sha256": "6b57735ba5e6041c79b73833fff267db54e425134efbab42728e3025c712153c",
+  "archive_bytes": 1030728211,
+  "train_csv_sha256": "e4abd43ce55f42388d3bcb9cfcb97168c6a3387aa8dd694da1d3bf1bfac65d0c",
+  "train_rows": 9912,
+  "example_test_rows": 8,
+  "reference_sha256": {
+    "breed_fingerprints.csv": "d7c15280450783724119068e668574f65ad1884d1770181b2f0ff9d7b28ba30d",
+    "petfinder_fingerprints.csv": "0dc2e76058f046d8b646c8e0e8f21f79d885554d41f34285e69c71443f6b25ff"
+  },
+  "processed_package_sha256": "7eff738a725af6e6bf10a45db6ebacf0fbee2e8ebdce90e8893c1f2025bdcdb0"
+}

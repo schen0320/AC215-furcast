@@ -16,6 +16,10 @@ This repository contains code, field contracts and aggregate audit reports. The 
 
 Oxford, Stanford, PetFinder Adoption and Austin entries describe earlier snapshot results. Pawpularity was processed on actual files on October 16; see [the completed run and training plan](docs/PAWPULARITY_TRAINING.md). No predictive model has been trained by this data handoff. Frontend and container integration remain separate team workstreams.
 
+## DVC continuation — 2026-10-17
+
+The real October 16 delivery has been independently revalidated (7,811 photos) and versioned with DVC. Raw-data reconstruction is wired and tested with synthetic inputs; this environment could not retrieve the 1 GB raw ZIP. See [DVC reproduction and exact access findings](docs/DVC.md). No shared or paid cloud remote has been selected.
+
 ## Start here
 
 Python 3.11+:

@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scope": "existing real delivery only",
+  "validated_prepared_images": 7811,
+  "empty_cache_clone_pull_revalidated": true,
+  "identical_validation_report": true,
+  "persistent_shared_remote_configured": false,
+  "real_raw_rebuild_executed": false
+}

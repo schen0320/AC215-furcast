@@ -1,0 +1,30 @@
+schema: '2.0'
+stages:
+  validate_delivery:
+    cmd: python validate_pawpularity_outputs.py --out
+      artifacts/delivery/processed --photos
+      artifacts/delivery/Pawpularity_Photos_300.zip --size 300 --report
+      artifacts/validation/delivery.json
+    deps:
+    - path: artifacts/delivery
+      hash: md5
+      md5: 9dfa779c3285dd4059cf11a15924d538.dir
+      size: 222710828
+      nfiles: 21
+    - path: furcast_data.py
+      hash: md5
+      md5: 1fc16de8809609f94d5471ef0b41cd05
+      size: 22166
+    - path: requirements-dvc.lock.txt
+      hash: md5
+      md5: ef7623e3038dd7c353b7124bdb748cfc
+      size: 1835
+    - path: validate_pawpularity_outputs.py
+      hash: md5
+      md5: 3f5263e2c038a3839cc4d47bb88a5fd9
+      size: 4939
+    outs:
+    - path: artifacts/validation/delivery.json
+      hash: md5
+      md5: 187a7c1d3c2c12f2ea6255cb75688929
+      size: 757

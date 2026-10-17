@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "data": "synthetic_only",
+  "raw_rows": 25,
+  "retained_rows": 23,
+  "forced_rebuild_identical_lock": true,
+  "no_op_identical_lock": true,
+  "changed_reference_rejected": true,
+  "local_push_empty_cache_pull_validated": true,
+  "real_raw_rebuild_proven": false
+}

@@ -1,0 +1,62 @@
+stages:
+  extract_pawpularity:
+    cmd: python pawpularity_inputs.py extract --archive artifacts/inputs/pawpularity.zip --out artifacts/raw/pawpularity
+    deps:
+      - pawpularity_inputs.py
+      - prepare_pawpularity.py
+      - furcast_data.py
+      - audit_oxford_images.py
+      - find_petfinder_duplicates.py
+      - requirements-dvc.lock.txt
+      - config/pawpularity-source.json
+      - artifacts/inputs/pawpularity.zip
+    outs:
+      - artifacts/raw/pawpularity
+  prepare_pawpularity:
+    cmd: >-
+      python pawpularity_inputs.py check --raw artifacts/raw/pawpularity --reference artifacts/reference &&
+      python prepare_pawpularity.py --raw artifacts/raw/pawpularity
+      --external-manifest artifacts/reference/breed_fingerprints.csv
+      --external-manifest artifacts/reference/petfinder_fingerprints.csv
+      --out artifacts/processed/pawpularity
+      --export-images artifacts/processed/Pawpularity_Photos_300.zip
+      --size ${pawpularity.image_size} --workers ${pawpularity.workers}
+    deps:
+      - pawpularity_inputs.py
+      - prepare_pawpularity.py
+      - furcast_data.py
+      - audit_oxford_images.py
+      - find_petfinder_duplicates.py
+      - requirements-dvc.lock.txt
+      - config/pawpularity-source.json
+      - docs/TARGETS_AND_SPLITS.md
+      - artifacts/raw/pawpularity
+      - artifacts/reference
+    outs:
+      - artifacts/processed/pawpularity
+      - artifacts/processed/Pawpularity_Photos_300.zip
+  validate_pawpularity:
+    cmd: >-
+      python validate_pawpularity_outputs.py --out artifacts/processed/pawpularity
+      --photos artifacts/processed/Pawpularity_Photos_300.zip
+      --size ${pawpularity.image_size} --report artifacts/validation/rebuild.json
+    deps:
+      - validate_pawpularity_outputs.py
+      - furcast_data.py
+      - requirements-dvc.lock.txt
+      - artifacts/processed/pawpularity
+      - artifacts/processed/Pawpularity_Photos_300.zip
+    outs:
+      - artifacts/validation/rebuild.json
+  validate_delivery:
+    cmd: >-
+      python validate_pawpularity_outputs.py --out artifacts/delivery/processed
+      --photos artifacts/delivery/Pawpularity_Photos_300.zip
+      --size 300 --report artifacts/validation/delivery.json
+    deps:
+      - validate_pawpularity_outputs.py
+      - furcast_data.py
+      - requirements-dvc.lock.txt
+      - artifacts/delivery
+    outs:
+      - artifacts/validation/delivery.json

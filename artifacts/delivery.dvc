@@ -1,0 +1,6 @@
+outs:
+- md5: 9dfa779c3285dd4059cf11a15924d538.dir
+  size: 222710828
+  nfiles: 21
+  hash: md5
+  path: delivery
